@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+@import "@fontsource/roboto/400.css";
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #ffffff;
+    background: linear-gradient(161deg, rgba(255, 255, 255, 1) 0%, rgba(191, 191, 182, 1) 50%, rgba(181, 45, 45, 1) 100%);
+    background-attachment: fixed;
+}
