@@ -39,13 +39,19 @@
         </div>
 
         <div class="media">
-          <img
-            v-if="p.dream_world_svg"
-            :src="p.dream_world_svg"
-            :alt="p.name"
-            class="img"
-          />
-          <div v-else class="img-placeholder">sem imagem</div>
+            <img
+                v-if="p.dream_world_svg"
+                :src="p.dream_world_svg"
+                :alt="p.name"
+                class="img"
+            />
+
+            <img
+                v-else
+                :src="`/thumb.png`"
+                alt="Sem imagem"
+                class="img"
+                />
         </div>
 
         <h3 class="title">{{ capitalize(p.name) }}</h3>
@@ -140,6 +146,12 @@
             :alt="selected.name"
             class="img-lg"
           />
+          <img
+            v-else
+            :src="`/thumb.png`"
+            alt="Sem imagem"
+            class="img-lg"
+            />
 
           <div class="row">
             <div><strong>Tipos:</strong>
