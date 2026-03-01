@@ -75,17 +75,17 @@ Relacionamento:
 
 ## 🐳 Instalação com Docker
 
-git clone <repo-url>
-cd pokeagenda
-
-docker compose up -d --build
-docker exec -it <container_name> bash
-composer install
-npm install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-npm run dev
-php artisan test
-php artisan test --filter PokemonApiTest
-php artisan test --filter FeedsServicesTest
+git clone <repo-url><br/>
+cd pokeagenda<br/>
+<br/>
+docker compose up -d --build<br/>
+docker exec -it <container_name> bash<br/>
+composer install<br/>
+npm install<br/>
+cp .env.example .env<br/>
+php artisan key:generate<br/>
+php artisan migrate<br/>
+npm run dev<br/>
+php artisan test<br/>
+php artisan test --filter PokemonApiTest<br/>
+php artisan test --filter FeedsServicesTest<br/>
