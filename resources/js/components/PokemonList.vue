@@ -27,12 +27,12 @@
           {{ isUpdating ? "Atualizando..." : "Atualizar importação" }}
         </button>
 
-        <div v-if="isUpdating" class="banner">Rodando importação <span>...</span></div>
+        <div v-if="isUpdating" class="banner">Importanto <span>...</span></div>
       </div>
     </header>
 
 
-    <section class="grid">
+    <section class="grid" v-if="filtered.length">
       <article v-for="p in filtered" :key="p.poke_id" class="card">
         <div class="card-head">
           <Maximize2 class="iconbtn" @click="openDetails(p)" />
@@ -67,6 +67,13 @@
           </div>
         </div>
       </article>
+    </section>
+
+    <section v-else class="empty">
+        <div class="empty-card">
+            <strong>Nenhum Pokémon encontrado</strong>
+            <p>Tente ajustar os filtros ou pesquisar por outro nome.</p>
+        </div>
     </section>
 
     <footer class="pager" v-if="meta && meta.last_page > 1">
@@ -279,6 +286,26 @@
 </script>
 
 <style scoped>
+
+    .empty {
+        display: grid;
+        place-items: center;
+        padding: 32px 12px;
+    }
+
+    .empty-card {
+        width: min(520px, 100%);
+        border: 1px solid rgba(255,255,255,.12);
+        border-radius: 16px;
+        padding: 18px 16px;
+        background: rgba(255,255,255,.8);
+        text-align: center;
+    }
+
+    .empty-card p {
+        margin: 8px 0 0;
+        opacity: .85;
+    }
 
     .pager {
         margin-top: 16px;

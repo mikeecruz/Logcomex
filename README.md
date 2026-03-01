@@ -76,12 +76,12 @@ Relacionamento:
 ## 🐳 Instalação com Docker
 
 git clone <repo-url><br/>
-cd pokeagenda<br/>
+cd Logcomex<br/>
 <br/>
 docker compose up -d --build<br/>
-docker exec -it <container_name> bash<br/>
+docker exec -it pokeagenda-app bash<br/>
 composer install<br/>
-npm install<br/>
+npm install *Fora do container*<br/>
 cp .env.example .env<br/>
 php artisan key:generate<br/>
 php artisan migrate<br/>
